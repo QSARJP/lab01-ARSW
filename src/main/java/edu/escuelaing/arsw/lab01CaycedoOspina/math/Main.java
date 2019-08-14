@@ -20,7 +20,7 @@ public class Main {
          * System.out.println(bytesToHex(PiDigits.getDigits(1, 1000000)));
          */
         System.out.println(bytesToHex(PiDigits.getDigits(0, 10)));
-        counter(2,10);
+        counter(3,10);
 
     }
 
@@ -39,7 +39,12 @@ public class Main {
             }
 
             i = i + partir ;
-            partir = partir + partir;
+            if (partir + partir > numero){
+                partir = numero;
+            }else {
+                partir = partir + partir;
+            }
+            
 
 
         }

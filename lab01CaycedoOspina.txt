@@ -1,0 +1,4 @@
+Integrantes:
+David Caycedo
+Juan Ospina
+https://github.com/QSARJP/lab01-ARSW.git
