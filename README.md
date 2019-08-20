@@ -45,27 +45,27 @@ Debido al tiempo de ejecucion del 1'000.000 se paso a realizar los sigueintes ej
 ## Single thread. 
 ![](img/single.png)
 ### Tiempo: 
-2.1326164
+2.1326164 sec.
 
 ## As many threads as processing cores. 
 ![](img/many.png)
 ### Tiempo: 
-1.1383019
+1.1383019 sec.
 
 ## So many threads as double processing cores. 
 ![](img/double.png)
 ### Tiempo: 
-0.9916208
+0.9916208 sec.
 
 ## 200 threads.
 ![](img/200.png)
 ### Tiempo: 
-0.6210134
+0.6210134 sec.
 
 ## 500 threads.
 ![](img/500.png)
 ### Tiempo: 
-1.37616
+1.37616 sec.
 
 1.
 
