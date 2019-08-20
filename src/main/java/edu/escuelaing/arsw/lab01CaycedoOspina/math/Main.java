@@ -7,10 +7,7 @@ package edu.escuelaing.arsw.lab01CaycedoOspina.math;
 
 import java.util.*;
 
-/**
- *
- * @author hcadavid
- */
+
 public class Main {
 
     public static void main(String a[]) {
@@ -18,16 +15,21 @@ public class Main {
          * System.out.println(bytesToHex(PiDigits.getDigits(0, 10)));
          * System.out.println(bytesToHex(PiDigits.getDigits(1, 100)));
          * System.out.println(bytesToHex(PiDigits.getDigits(1, 1000000)));
-         */
-        System.out.println(bytesToHex(PiDigits.getDigits(0, 10)));
+         *
+
+         * double seconds1 = 0;
+         * long start1 = System.nanoTime();
+         * seconds1 = (double) (System.nanoTime()-start1)/1000000000;
+         * System.out.println(bytesToHex(PiDigits.getDigits(0, 100000)));
+         * System.out.println("Segundos: " + seconds1);
+        */
         double seconds = 0;
-        DigitCalculation digitCalculation = new DigitCalculation(200);
         long start = System.nanoTime();
-        List<byte[]> digitos = digitCalculation.calcular(200,0,50000);
+        List<byte[]> digitos = PiDigits.calcularThread(500,0,500000);
         seconds = (double) (System.nanoTime()-start)/1000000000;
         StringBuilder respuesta = new StringBuilder();
-        for (byte[] digitosByte :  digitos ){
-            respuesta.append(bytesToHex(digitosByte));
+        for (byte[] digito :  digitos ){
+            respuesta.append(bytesToHex(digito));
         }
         System.out.println(respuesta);
         System.out.println("Segundos: " + seconds);

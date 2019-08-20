@@ -14,7 +14,7 @@ public class BbpThread extends Thread{
 
     }
 
-    public byte[] getRespuesta (){
+    public byte[] getRespuesta(){
         return this.respuesta;
     }
 

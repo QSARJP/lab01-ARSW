@@ -1,5 +1,8 @@
 package edu.escuelaing.arsw.lab01CaycedoOspina.math;
 
+
+
+import java.util.*;
 ///  <summary>
 ///  An implementation of the Bailey-Borwein-Plouffe formula for calculating hexadecimal
 ///  digits of pi.
@@ -111,30 +114,31 @@ public class PiDigits {
         return result;
     }
 
-    public  List<byte[]> calcularThread(int numero,int start, int numberOfDigits){
-        List<byte[]> bytes = new ArrayList<>();
-        List<BbpThread> threadList = new ArrayList<>();
+    public static List<byte[]> calcularThread(int numero,int start, int numberOfDigits){
+        List<byte[]> bytes = new ArrayList<byte[]>();
+        List<BbpThread> threadList = new ArrayList<BbpThread>();
 
         int partir = numberOfDigits / numero;
         int result = numberOfDigits % numero;
         int fin = 0;
 
-        for(int i=0;i<n;i++){
+        for(int i=0;i<numero;i++){
             fin = start + partir;
             if (result > 0){ 
                 fin++;
+            }
             else{
                 result--;
             }
-            BbpThread thread = new BbpThread(start,fin-start)
+            BbpThread thread = new BbpThread(start,fin-start);
             threadList.add(thread);
             thread.start();
             start = fin;
         }
-        for (BbpThread thread : i){
+        for (BbpThread i : threadList){
             try {
                 i.join();
-                bytes.add(i.getByteAnswer());
+                bytes.add(i.getRespuesta());
             } catch (InterruptedException e) {
                 System.err.println("Error " + e.getMessage());
                 System.exit(1);
