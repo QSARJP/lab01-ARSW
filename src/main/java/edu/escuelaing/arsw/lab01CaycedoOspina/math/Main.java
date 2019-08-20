@@ -20,41 +20,20 @@ public class Main {
          * System.out.println(bytesToHex(PiDigits.getDigits(1, 1000000)));
          */
         System.out.println(bytesToHex(PiDigits.getDigits(0, 10)));
-        counter(3,10);
-
-    }
-
-    public static void counter(Integer n, Integer numero) {
-        int partir = (int) numero / n;
-        int i = 0;
-        while (partir < numero) {
-
-            Thread hilon = new bbpThread(i, partir);
-            hilon.start();
-            try {
-                hilon.join();
-                                
-            } catch (InterruptedException e) {
-                System.out.println("error");
-            }
-
-            i = i + partir ;
-            if (partir + partir > numero){
-                partir = numero;
-            }else {
-                partir = partir + partir;
-            }
-            
-
-
+        double seconds = 0;
+        DigitCalculation digitCalculation = new DigitCalculation(200);
+        long start = System.nanoTime();
+        List<byte[]> digitos = digitCalculation.calcular(200,0,50000);
+        seconds = (double) (System.nanoTime()-start)/1000000000;
+        StringBuilder respuesta = new StringBuilder();
+        for (byte[] digitosByte :  digitos ){
+            respuesta.append(bytesToHex(digitosByte));
         }
-        
-        
-
-
-            
-            
+        System.out.println(respuesta);
+        System.out.println("Segundos: " + seconds);
     }
+
+    
     
 
     private final static char[] hexArray = "0123456789ABCDEF".toCharArray();

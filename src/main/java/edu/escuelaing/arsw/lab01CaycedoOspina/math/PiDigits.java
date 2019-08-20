@@ -111,4 +111,36 @@ public class PiDigits {
         return result;
     }
 
+    public  List<byte[]> calcularThread(int numero,int start, int numberOfDigits){
+        List<byte[]> bytes = new ArrayList<>();
+        List<BbpThread> threadList = new ArrayList<>();
+
+        int partir = numberOfDigits / numero;
+        int result = numberOfDigits % numero;
+        int fin = 0;
+
+        for(int i=0;i<n;i++){
+            fin = start + partir;
+            if (result > 0){ 
+                fin++;
+            else{
+                result--;
+            }
+            BbpThread thread = new BbpThread(start,fin-start)
+            threadList.add(thread);
+            thread.start();
+            start = fin;
+        }
+        for (BbpThread thread : i){
+            try {
+                i.join();
+                bytes.add(i.getByteAnswer());
+            } catch (InterruptedException e) {
+                System.err.println("Error " + e.getMessage());
+                System.exit(1);
+            }
+        }
+        return bytes;
+    }
+
 }
