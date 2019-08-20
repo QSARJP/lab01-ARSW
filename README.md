@@ -1,3 +1,15 @@
+
+# Compile and run instructions
+
+## Para ejecutar CountThread: 
+mvn exec:java -Dexec.mainClass="edu.escuelaing.arsw.lab01CaycedoOspina.threads.CountThreadsMain"
+
+## Para ejecutar PiDigits: 
+mvn exec:java -Dexec.mainClass="edu.escuelaing.arsw.lab01CaycedoOspina.math.Main"
+
+## Para ejecutar las pruebas: 
+mvn test
+
 # Part I - Introduction to Java Threads
 
 Se creo tres instancias de threads los cuales tenian diferentes rangos de datos
@@ -29,5 +41,28 @@ el comienzo y los numeros que se van a definir.
 
 
 # Part III - Performance Evaluation
+
+## Single thread. 
+### Tiempo: 
+
+## As many threads as processing cores. 
+### Tiempo: 
+
+## So many threads as double processing cores. 
+### Tiempo: 
+
+## 200 threads.
+### Tiempo: 
+
+## 500 threads.
+### Tiempo: 
+
+1.
+
+2.
+
+3.
+
+
 
 
