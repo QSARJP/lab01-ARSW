@@ -25,7 +25,7 @@ public class Main {
         */
         double seconds = 0;
         long start = System.nanoTime();
-        List<byte[]> digitos = PiDigits.calcularThread(500,0,500000);
+        List<byte[]> digitos = PiDigits.calcularThread(200,0,10000);
         seconds = (double) (System.nanoTime()-start)/1000000000;
         StringBuilder respuesta = new StringBuilder();
         for (byte[] digito :  digitos ){
