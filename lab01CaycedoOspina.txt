@@ -1,4 +1,10 @@
 Integrantes:
 David Caycedo
 Juan Ospina
-https://github.com/QSARJP/lab01-ARSW.git
+
+BBP_FORMULA
+https://github.com/QSARJP/lab01-ARSW-BBP_FORMULA
+
+DOG-RACE-CASE
+https://github.com/QSARJP/lab01-ARSW-DOGS-RACE-CASE
+
