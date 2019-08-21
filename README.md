@@ -67,11 +67,18 @@ Debido al tiempo de ejecucion del 1'000.000 se paso a realizar los sigueintes ej
 ### Tiempo: 
 1.37616 sec.
 
-1.
+1. el mejo tiempo que da el ejercicio es con 200 threads, una de las razones es que al tener mayor cantidad de 
+hilos deben pasar a utilizarse mas recursos para poder sincronizarce por lo que se puede esperar que entre mas threads se usen
+despues de cierta cantidad el rendimiento decae.
 
-2.
+2. debido a que por cada procesador se tiene dos hilos el trabajo que tiene que realizar es muy poco,
+por lo cual si se tiene gran cantidad de hilos pro precesador mejorara el rendimiento a medida que se aumenten los 
+threads.
 
-3.
+3. Como se puede ver en la grafica a partir de una cierta cantidad de threads el rendimiento no crece a razon costante por lo que se 
+puede decir es que a medida que se usan mas recursos el redmiento decae.
+
+![](img/amdahl.png)
 
 
 
