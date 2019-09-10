@@ -57,6 +57,7 @@ Debido al tiempo de ejecucion del 1'000.000 se paso a realizar los sigueintes ej
 ### Tiempo: 
 0.9916208 sec.
 
+
 ## 200 threads.
 ![](img/200.png)
 ### Tiempo: 
